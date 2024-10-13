@@ -1,7 +1,10 @@
 import express from 'express';
+import helmet from 'helmet';
 import authRoutes from './routes/auth';
 
 const app = express();
+
+app.use(helmet());
 app.use(express.json());
 
 // Rotas
